@@ -51,7 +51,7 @@ def main_multiprocess_executor(passwords: list) -> None:
 def get_ranges(total_number, total_chunks):
     ranges = []
     chunk_size = math.ceil(total_number / total_chunks)
-    for chunk in range(cpu_counter):
+    for chunk in range(total_chunks):
         end_range_num = min(total_number, (chunk * chunk_size + chunk_size))
         ranges.append((chunk * chunk_size, end_range_num))
     return ranges
